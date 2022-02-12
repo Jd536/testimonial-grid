@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #edf2f8;
+  font-size: 13px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  color: #092449;
+}
+
+.testimonial-grid {
+  display: grid;
+  gap:1.5rem;
+ 
+  padding-block: 2rem;
+  width: min(95%, 70rem);
+  margin-inline: auto;
+}
+
+
+
+article:nth-of-type(1){
+  background: #733fc8;
+  background-image: url('./images/bg-pattern-quotation.svg');
+  background-repeat: no-repeat;
+  background-position: top right 20%;
+  color: #fff;
+  /* grid-column:span 2 ; */
+}
+article:nth-of-type(2n){
+  background: #49556b;
+  color: #fff;
+}
+article:nth-of-type(4n){
+  background: #18202d;
+  color: #fff;
+  /* grid-column: span 2; */
+}
+
+
+/* .article:nth-of-type(3n) {
+ color: #3d434b;
+}
+.article:nth-of-type(5n) {
+ color: #48505a;
+} */
+
+.testimonial {
+  padding: 2rem;
+  border-radius: .5rem;
+  box-shadow: -1px 2px 12px -3px rgba(0,0,0,0.21);
+-webkit-box-shadow: -1px 2px 12px -3px rgba(0,0,0,0.21);
+-moz-box-shadow: -1px 2px 12px -3px rgba(0,0,0,0.21);
+}
+
+.testimonial h2 {
+  font-weight: 500;
+}
+.testimonial h3 {
+  font-weight: 6500;
+}
+.testimonial p {
+  opacity: 50%;
+}
+.testimonial .testimonial-quote {
+  opacity: 75%;
+}
+
+.testimonial-header-container img{  
+  border-radius: 50%;
+
+}
+
+.testimonial-header-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+.testimonial-header-container img{  
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+
+}
+.name-title {
+ margin-left: 1rem;
+}
+.name-title h2{
+ margin-bottom: 0;
+}
+.name-title p{
+  margin-top: 0;
+ }
+
+article:nth-of-type(1) img {
+  border: 3px solid #a478e7;
+}
+article:nth-of-type(4) img {
+  border: 3px solid #733fc8;;
+}
+
+@media (min-width:50em){
+  .testimonial-grid{
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  article:nth-of-type(1){
+     grid-column:span 2 ;
+  }
+  article:nth-of-type(4n){
+    grid-column: 2/4;
+  }
+  
+  article:nth-of-type(5n) {
+    grid-column: 4;
+    grid-row: 1/3;
+  }
+}
